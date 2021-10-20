@@ -15,8 +15,7 @@ Please Like Subscribe and Comment on this video, it HELPS SO MUCH!!
 Create an empty Repository on github.com, follow video, Do Not add a README or anything else, leave it empty. Name it whatever yo'd like.
 
 now type...
-cd (paste name of the new repository you just made)
-npm install gh-pages --save-dev
+cd (paste name of the new repository you just
 
 Go to package.json line 27 and change homepage to yours. 
 "http://<username>.github.io/<repository>"
@@ -43,7 +42,8 @@ run command...
 git init
 
 git remote add origin https://github.com/<username>/<repository>
-git remote -v
+
+
 npm run deploy // This runs the App and launches your DApp onto the github hosted Domain
 
 You should now have a 2nd branch in your Repo named gh-pages.

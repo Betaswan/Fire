@@ -66,12 +66,12 @@ function App() {
     setFeedback("Preparing your Twee the Bee NFT...");
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, _amount)
+      .mint(_amount)
       .send({
         gasLimit: "285000",
-        to: "0x688db0131c807a3495c23bc1b25726a76ea31f49",
+        to: "0x0a513C326170899c024e61e98ea9A0509620Ad7b",
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((.02 * _amount).toString(), "ether"),
+        value: blockchain.web3.utils.toWei((.01 * _amount).toString(), "ether"),
       })
       .once("error", (err) => {
         console.log(err);
@@ -103,8 +103,8 @@ function App() {
         <s.TextTitle
           style={{ textAlign: "center", fontSize: 36, fontWeight: "bold" }}
         >
-          The Bee Collaborative NFT Minting Hive
-          
+          Saki Test
+
         </s.TextTitle>
         <s.SpacerMedium />
         <ResponsiveWrapper flex={1} style={{ padding: 12 }}>
@@ -156,10 +156,10 @@ function App() {
                 </s.TextDescription>
                 <s.SpacerMedium />
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.TextDescription style={{ textAlign: "center" }}>
-                    
+
                     </s.TextDescription>
                     <s.SpacerSmall />
                     <StyledButton
@@ -205,7 +205,7 @@ function App() {
           </s.TextDescription>
           <s.SpacerSmall />
           <s.TextDescription style={{ textAlign: "center", fontSize: 14 }}>
-            Bee Rewarded to help Save the Bees #TBCToken<p/>*.*.*Launching_Soon*.*.*
+            Bee Rewarded to help Save the Bees #TBCToken<p />*.*.*Launching_Soon*.*.*
           </s.TextDescription>
         </s.Container>
       </s.Container>
